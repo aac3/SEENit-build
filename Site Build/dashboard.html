@@ -2,99 +2,108 @@
 <html lang='en'>
 	<head>
 		<title>SEENit: If you've seen it, List it!</title>
-		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/main.css" />
+		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css' />
 	</head>
+	
 	<body>
-		<!----Header with Logo, social media links, and navigation------->
+
+		<!----header with Logo, social media links, and navigation------->
 		<header>
-			<img src="#" alt>
-			<a href="#"><img src="#" atl></a>
-			<a href="#"><img src="#" atl></a>
-			<a href="#"><img src="#" atl></a>		
+			
+				
+			<h1><span><strong>Seen It</strong><br />If you've seen it, list it!</span></h1>
+			<ul class="media">
+				<li><a href="#"><img src="img/icons/facebook.png" alt="facebook link"></a></li>
+				<li><a href="#"><img src="img/icons/twitter.png"  alt="twitter link"></a></li>
+				<li><a href="#"><img src="img/icons/pinterest.png" alt="pinterest link"></a></li>
+			</ul>		
+				
+			<nav>
+				<ul>
+					<li><a href="#">Login</a></li>
+					<li><a href="signup.html">Sign Up</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+				
 		</header>
-		<nav>
-			<ul>
-				<li><a href="#">Login</a></li>
-				<li><a href="#">Sign Up</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Contact Us</a></li>
-			</ul>
-		</nav>
 		
-		<!-----Section navigation--------->
-		<div class="navi">
-          <select name="naviList" value="Dashboard" class="select-block">
-            <option value="0">Edit Profile</option>
-            <option value="1">Create List</option>
-            <option value="2">View List</option>
-            <option value="3">Friends</option>
-			<option value="4">Movie Search</option>
-            <option value="Dashboard" selected="selected">Dashboard</option>
-          </select>
-        </div>
+		<!-----menu--------->
+		<div class="menu">
+		<div class="wrapper">
+		
+		  <!---------user profile--------->
+		  
+		  <section>
+	        <img src="#" />
+	        <h4>Username</h4>
+	        <h4>join date</h4>
+	        
+	        <!-------Stats------------------>
+		    <h3>Stats</h3>
+		  
+			<ol class="stat-list">
+			  <li>Movie Count</li>
+			  <li>List</li>
+			  <li>Friends</li>
+			</ol>
+			
+			<ol class="stat-list2">
+			  <li>Ranked</li>
+			  <li>Reviews</li>
+			  <li>5 Star Movies</li>
+			</ol>
+		 
+		  </section>
+		  
+	
+	      <ul>
+	         <li id="focus">Dashboard</li>
+	         <li>Edit Profile</li>
+	         <li>View List</li>
+	         <li>Create List</li>
+	         <li>Friends</li>
+	         <li>Movie Search</li>
+	      </ul>    	       
         
-        <!-------User profile & Stats------>
-        <div class="profile">
-        	<img src="#">
-        	<div class="info">
-        		<p>username</p>
-        		<p>date joined</p>
-        	</div>
-        	<div class="request">
-        		<img src="#">
-        	</div>
         </div>
-        <div class="stats">
-        	<h2>Stats</h2>
-        	<div class="statInfo">
-        		<p>Movie Count</p>
-        		<p>Rank</p>
-        		<p>List</p>
-        		<p>Reviews</p>
-        		<p>Friends</p>
-        		<p>5 Star Movies</p>
-        	</div>
-        </div>
-        
-        <!--------Reviewed Movies-------->
-        <div class="reviewedMovies">
-        	<div class="title">
-        		<h2>Our Top 5 Most Reviewed Movies</h2>
-        	</div>
-        	<div class="fiveMovies">
-        		
-        	</div>
         </div>
 
-				
-		<!------Footer with links and copyright information------->
-		<footer class="links">
-			<div class="know">
-				<p>Know Us</p>
+		<!------footer with links and copyright information------->
+		<footer>
+		<div class="wrapper">
+		
+				<div>
+				<h5>Know Us</h5>
 				<ul>
-					<li><a href="#">About</a></li>
+					<li><a href="#">About</a></li><br />
 					<li><a href="#">Rotten Tomatoes</a></li>
 				</ul>
-			</div>
-			
-			<div class="Contact">
-				<p>Contact Us</p>
+				</div>
+				
+				<div>
+				<h5>Contact Us</h5>
 				<ul>
-					<li>Email<a href="#">team@seenit.com</a></li>
+					<li id="blue">Email:<a href="#" id="email">team@seenit.com</a></li>
 					<li><a href="#">Fill Out Form</a></li>
 				</ul>
-			</div>
-			
-			<div class="follow">
-				<a href="#"><img src="#" atl></a>
-				<a href="#"><img src="#" atl></a>
-				<a href="#"><img src="#" atl></a>
-			</div>
-			
-			
-			<div class="rights">
-				<p>Copyright &copy; 2013 Craig Design. All rights reserved.</p>
-			</div>
+				</div>
+				
+				<div>
+				<h5>Follow Us</h5>
+				<ul>
+					<li><a href="#"><img src="#" alt="facebook link"></a></li>
+					<li><a href="#"><img src="#" alt="twitter link"></a></li>
+					<li><a href="#"><img src="#" alt="pinterest link"></a></li>
+				</ul>
+				</div>
+
+ 			
+		</div>	
+		<p id="rights">Copyright &copy; 2013 Craig Design. All rights reserved.</p>	
 		</footer>
+		
 	</body>
 </html>
