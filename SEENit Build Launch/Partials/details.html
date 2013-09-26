@@ -1,0 +1,25 @@
+<div id="info2">
+	
+	<img  id="post2"src="{{movieResult.posters.original}}" height="450" width="350">	
+	<h1 class="titles2">{{movieResult.title}} ({{movieResult.year}})</h1>
+	<ol class="list2">
+		<li>Rated:</li>
+		<li class="color">{{movieResult.mpaa_rating}}</li> 
+		<li>Runtime:</li>
+		<li class="color">{{movieResult.runtime}} minutes</li>
+	</ol>
+	
+	<h2 class="st">Studio</h2>
+	<p>{{movieResult.studio}}</p>
+	
+	<h2>Release Dates</h2>
+	<p><strong>Theaters:</strong> {{movieResult.release_dates.theater}}</p>
+	<p><strong>Dvd:</strong> {{movieResult.release_dates.dvd}}</p>
+	
+	<div class="plot">
+		<h2>Plot</h2>
+		<p>{{movieResult.synopsis}}</p>
+		<button type="submit"><a href="#/search"><i class="icon-chevron-sign-left"></i>back</a></button>
+	</div>
+	
+</div>
