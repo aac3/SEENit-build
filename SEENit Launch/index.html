@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang='en' ng-app="MovieApi">
+	<head>
+		<title>SEENit: If you've seen it, List it!</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="css/reveal.css" />
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet"> <!------Font Awesome------->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script> <!----Jquery----->
+		<script type="text/javascript" src="js/jquery.reveal.js"></script> <!------Popup JS----->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script> <!----Angular JS----->
+		<script type="text/javascript" src="js/angular-rs.js"></script> <!-----Angular Resource JS---->
+		<script type="text/javascript" src="js/controllers.js"></script> <!-----API Controllers----->
+		
+		<script src="https://cdn.firebase.com/v0/firebase.js"></script> <!-----Firebase-------->
+		<script src="https://cdn.firebase.com/v0/firebase-simple-login.js"/> <!---------Firebase Simple Login------->
+		
+		<script type="text/javascript" src="js/login.js"></script>	
+				
+	</head>
+	
+	<body ng-controller="BoxOfficeCtrl" ng-controller="CoreController">
+
+			<!----header with Logo, social media links, and navigation------->
+			<header>
+			
+				
+				<h1><a href="index.html"><strong>Seen It</strong>If you've seen it, list it!</a></h1>
+				
+				<ul class="media">
+					<li><a href="https://www.facebook.com/pages/SEENit/563111487089218"><i class="icon-facebook-sign"></i></a></li>
+					<li><a href="https://twitter.com/TeamSEENit"><i class="icon-twitter-sign"></i></a></li>
+					<li><a href="https://plus.google.com/u/0/101742963975919926235/posts"><i class="icon-google-plus-sign"></i></a></li>
+				</ul>		
+				
+				<nav>
+					<ul>
+						<li><a href="#" class="big-link" data-reveal-id="myModal">Login</a></li>
+						<li><a href="signup.html">Sign Up</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+				
+			</header>
+			
+			<!----------popup login----------------------->
+			<div id="myModal" class="reveal-modal">
+				<h2>Login</h2>
+				<form>
+					<p><input type="text" ng-model="email"  placeholder="Email Address" class="icon-email" /></p>	
+					<p><input type="text" ng-model="password"  placeholder="Password" class="icon-password" /></p>
+					
+					<button ng-click="login()">LogIn</button>
+					<p class="close-reveal-modal">&#215;</p>
+				</form>
+			</div>
+
+			
+	
+			<!----cta with Slogan, top movies, become a member button, and sponsor----->
+			<div class="wrapper">
+			
+				<h3>Welcome to SEENit! The place to keep track of all your movies.</h3>	
+				
+				<ul ng-view=""></ul>
+				
+				<h6><a href="signup.html">BECOME A MEMBER!</a></h6>		
+				
+				<p id="power">Powered by Rotten Tomatoes</p>
+				
+			</div>
+				
+
+		
+		<!-----submenu with 4 features and second CTA-------> 
+		<section id="features">
+		<div class="wrapper">
+		
+			<article id="rank">
+				<h2><i class="icon-trophy"></i>Rank</h2>
+				<p>You and your friends will be competing for the most movies seen. Know where you are ranked among your friends as you build your movie library.  You and your friends will be ranked base on total movies and total movie list. Ranking makes watching movies more fun and competitive among friends. Add friends from Facebook or Twitter and see who is really the biggest movie buff. </p>		
+			</article>
+			
+			<article id="friends">
+				<h2><i class="icon-group"></i>Friends</h2>
+				<p>SEENit gives you ways to brag, compare, compete, and suggest movies by adding friends from social sites like Facebook and Twitter. Send friend request to all your friends and family. Brag about how many movies you have with our ranking system. Compete against friends to see who&apos;s seen the most movies. And suggest your favorite movies to all friends. </p>		
+			</article>
+			
+			<article id="list">
+				<h2><i class="icon-list"></i>List</h2>
+				<p>SEENit&apos;s list gives you easy access to your collection. You can create list for different types of movies, or occasions. Make a Friday night movie list or family movie list. Keep a list of documentaries, action, blockbusters, and Christmas favorites. Name them how you like and add the movies when you want. </p>
+			</article>
+			
+			<article id="reviews">
+				<h2><i class="icon-edit"></i>Reviews</h2>
+				<p>With Reviews we give you the option to share your thoughts on a movie. Reviews can be a great way to let friends know what you think of a movie right after you&apos;ve seen it. Read friends reviews. You can read your friends reviews and see what they thought of a movie. </p>
+			</article>
+			
+			<h3><a href="signup.html">Sign up</a> to enjoy these features now!</h3>
+			
+		</div>	
+		</section>
+		
+		<!------footer with links and copyright information------->
+		<footer>
+		<div class="wrapper">
+		
+				<div>
+				<h5>Know Us</h5>
+				<ul>
+					<li><a href="about.html">About</a></li><br />
+					<li><a href="http://www.rottentomatoes.com">Rotten Tomatoes</a></li>
+				</ul>
+				</div>
+				
+				<div>
+				<h5>Contact Us</h5>
+				<ul>
+					<li id="blue">Email:<a href="#" id="email">team@seenit.com</a></li>
+					<li><a href="contact.html">Fill Out Form</a></li>
+				</ul>
+				</div>
+				
+				<div>
+				<h5>Follow Us</h5>
+				<ul class="media">
+					<li><a href="https://www.facebook.com/pages/SEENit/563111487089218"><i class="icon-facebook"></i></a></li>
+					<li><a href="https://twitter.com/TeamSEENit"><i class="icon-twitter"></i></a></li>
+					<li><a href="https://plus.google.com/u/0/101742963975919926235/posts"><i class="icon-google-plus"></i></a></li>
+				</ul>	
+				</div>
+
+ 			
+		</div>	
+		<p id="rights">Copyright &copy; 2013 Craig Design. All rights reserved.</p>	
+		</footer>
+		
+		
+	</body>
+</html>
